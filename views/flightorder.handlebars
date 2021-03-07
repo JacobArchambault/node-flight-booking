@@ -2,6 +2,12 @@
 <h1>Daily flights</h1>
 <p>All times are local</p>
 <p>Airport codes: SDF is Louisville, MIA is Miami, LAS is Las Vegas</p>
+<table class="table">
+<tr><th>Flight number</th><th>Depart</th><th>Arrive</th></tr>
+{{#each flights}}
+   <tr><td>{{flight}}</td><td>{{origin}}</td><td>{{destination}}</td></tr>
+{{/each}}
+</table>
 <form method="post" action="handleform">
 <p><input type="text" name="fullname" placeholder="Enter full name"> Enter full name </p>
 <p><input type="text" name="address" placeholder="Enter your address" size='35'>Enter address <br></p>

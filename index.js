@@ -19,11 +19,11 @@ var schedule = [
    {flight: 5505, origin: "SDF 11:20am", destination: "LAS 12:30pm"}
    ];
 app.get('/', function(req, res) {
-   res.render('welcome', {page_title: "welcome page", flights: schedule});
+   res.render('welcome', {page_title: "welcome page"});
 });
 
 app.get('/orders', function(req, res) {      
-   res.render('flightorder', {page_title: 'Pick a flight'});   
+   res.render('flightorder', {page_title: 'Pick a flight', flights: schedule});   
 });
 
 app.post('/handleform', function(req, res) {    // handle a post request
