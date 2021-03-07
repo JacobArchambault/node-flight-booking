@@ -12,15 +12,14 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static('public' ));
 
-var items = [
-  {size: "8 inch pizza", toppings: 'Mushrooms', price: '$9.50'},
-  {size: "16 inch pizza", toppings: 'Mushrooms & Sausage', price: '$19.00'},
-  {size: "12 inch pizza", toppings: 'Pepperoni', price: '$13.50'},
-  {size: "20 inch pizza", toppings: 'Mushrooms, Sausage, Pepperoni', price: '$24.50'}
- ];
-
+var schedule = [
+   {flight: 1212, origin: "SDF 7:00am", destination: "MIA 9:50am"},
+   {flight: 4505, origin: "SDF 7:20am", destination: "LAS 8:30am"},
+   {flight: 2212, origin: "SDF 10:00am", destination: "MIA 12:50pm"},
+   {flight: 5505, origin: "SDF 11:20am", destination: "LAS 12:30pm"}
+   ];
 app.get('/', function(req, res) {
-   res.render('welcome', {page_title: "welcome page", pizzas: items});
+   res.render('welcome', {page_title: "welcome page", flights: schedule});
 });
 
 app.get('/orders', function(req, res) {      

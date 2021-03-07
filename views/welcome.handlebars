@@ -5,7 +5,7 @@
 <p>Click the 'Pick a Flight' link above to see our schedule</p>
 <table class="table">
 <tr><th>Flight number</th><th>Depart</th><th>Arrive</th></tr>
-{{#each pizzas}}
-   <tr><td>{{size}}</td><td>{{toppings}}</td><td>{{price}}</td></tr>
+{{#each flights}}
+   <tr><td>{{flight}}</td><td>{{origin}}</td><td>{{destination}}</td></tr>
 {{/each}}
 </table>
