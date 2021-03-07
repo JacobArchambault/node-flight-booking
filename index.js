@@ -60,5 +60,5 @@ app.use(function (req, res) {
 });
 
 app.listen(3000,  function () {
-   console.log('Pizza App started on http://localhost:3000, press Ctrl-C to terminate.' );
+   console.log('Flight App started on http://localhost:3000, press Ctrl-C to terminate.' );
 });
