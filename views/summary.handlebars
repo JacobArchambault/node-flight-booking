@@ -1,0 +1,13 @@
+<h3>Welcome to Pi Are Round Pizza!</h3
+>
+<p>Here is your order summary.</p>
+<ul>
+   <li>Name: {{name}}</li>
+   <li>Address: {{address}}</li>
+   <li>Size: {{diameter}}</li>
+   {{#if toppings}}
+      <li>Toppings: {{toppings}}</li>
+   {{/if}}
+   <li>Pickup or Delivery: {{delivery}}</li>
+   <li>Price: {{price}}</li>
+</ul>

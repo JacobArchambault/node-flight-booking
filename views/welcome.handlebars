@@ -1,0 +1,9 @@
+<h3>Welcome to Pie Are Round Pizza</h3>
+You can get a cheeze pizza if you want. But we also offer tippings. To place your order please click the Order Form link in the menu at the top of this page.</p>
+Otherwise, here are a few possible options.
+<table class="table">
+<tr><th>Size</th><th>Toppings</th><th>Price</th></tr>
+{{#each pizzas}}
+   <tr><td>{{size}}</td><td>{{toppings}}</td><td>{{price}}</td></tr>
+{{/each}}
+</table>

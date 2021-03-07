@@ -1,2 +1,2 @@
-# node-flight-booking
-A node.js app simulating a flight booking website.
+# pizzaOrder
+A node.js web application simulating a pizza delivery restaurant
