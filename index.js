@@ -24,7 +24,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/orders', function(req, res) {      
-   res.render('orderform', {page_title: 'order page'});   
+   res.render('flightorder', {page_title: 'Pick a flight'});   
 });
 
 app.post('/handleform', function(req, res) {    // handle a post request
