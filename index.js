@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
    res.render('welcome', {page_title: "welcome page"});
 });
 
-app.get('/orders', function(req, res) {      
+app.get('/flights', function(req, res) {      
    res.render('flightorder', {page_title: 'Pick a flight', flights: schedule});   
 });
 
