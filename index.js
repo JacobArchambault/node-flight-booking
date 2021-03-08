@@ -32,24 +32,12 @@ app.post('/handleform', function(req, res) {    // handle a post request
    var name = req.body.fullname;  // retrieve name=value pairs from the html form
    var addr = req.body.flightnumber;
    var seating = req.body.seating;
-   var numberOfToppings = 0;
-   var toppings = req.body.toppings;  // might or mignt not be an array of toppings
-   
-   if(Array.isArray(toppings)) {    // we have an array of toppings
-       numberOfToppings = toppings.length
-	   var toppings = toppings.join(", ") + ', add $' + numberOfToppings * 1.22;  // convert array to string
-   }
-   else if(toppings){             // topping is defined, but as a single string value
-       numberOfToppings = 1;
-	   toppings += ", add $1.22";
-   }
-	   
+   var meal = req.body.meal;
+   	   
    var method = req.body.deliver;
-   
-   var price = '$' + (parseInt(seating) + numberOfToppings * 1.22).toFixed(2);  // calculat total price
-   
+      
    order_summary = {page_title: "summary", name: name, flightnumber: addr, class: seating, 
-                toppings: toppings, delivery: method, price: price}
+                inflightmeal: meal, delivery: method}
    res.render('summary', order_summary);
 });
 
