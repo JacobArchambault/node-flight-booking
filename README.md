@@ -1,2 +1,2 @@
 # pizzaOrder
-A node.js web application simulating a pizza delivery restaurant
+A node.js web application simulating a flight booking website

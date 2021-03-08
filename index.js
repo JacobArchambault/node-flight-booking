@@ -34,10 +34,9 @@ app.post('/handleform', function(req, res) {    // handle a post request
    var seating = req.body.seating;
    var meal = req.body.meal;
    	   
-   var method = req.body.deliver;
       
    order_summary = {page_title: "summary", name: name, flightnumber: addr, class: seating, 
-                inflightmeal: meal, delivery: method}
+                inflightmeal: meal}
    res.render('summary', order_summary);
 });
 
