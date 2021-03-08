@@ -30,7 +30,7 @@ app.post('/handleform', function(req, res) {    // handle a post request
 	var reqBody = req.body;
    console.log(reqBody);         // print form data to console for troubleshooting
    var name = req.body.fullname;  // retrieve name=value pairs from the html form
-   var addr = req.body.address;
+   var addr = req.body.flightnumber;
    var size = req.body.size;
    var numberOfToppings = 0;
    var toppings = req.body.toppings;  // might or mignt not be an array of toppings
@@ -48,7 +48,7 @@ app.post('/handleform', function(req, res) {    // handle a post request
    
    var price = '$' + (parseInt(size) + numberOfToppings * 1.22).toFixed(2);  // calculat total price
    
-   order_summary = {page_title: "summary", name: name, address: addr, diameter: size, 
+   order_summary = {page_title: "summary", name: name, flightnumber: addr, diameter: size, 
                 toppings: toppings, delivery: method, price: price}
    res.render('summary', order_summary);
 });
