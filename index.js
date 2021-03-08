@@ -31,7 +31,7 @@ app.post('/handleform', function(req, res) {    // handle a post request
    console.log(reqBody);         // print form data to console for troubleshooting
    var name = req.body.fullname;  // retrieve name=value pairs from the html form
    var addr = req.body.flightnumber;
-   var size = req.body.size;
+   var seating = req.body.seating;
    var numberOfToppings = 0;
    var toppings = req.body.toppings;  // might or mignt not be an array of toppings
    
@@ -46,9 +46,9 @@ app.post('/handleform', function(req, res) {    // handle a post request
 	   
    var method = req.body.deliver;
    
-   var price = '$' + (parseInt(size) + numberOfToppings * 1.22).toFixed(2);  // calculat total price
+   var price = '$' + (parseInt(seating) + numberOfToppings * 1.22).toFixed(2);  // calculat total price
    
-   order_summary = {page_title: "summary", name: name, flightnumber: addr, diameter: size, 
+   order_summary = {page_title: "summary", name: name, flightnumber: addr, class: seating, 
                 toppings: toppings, delivery: method, price: price}
    res.render('summary', order_summary);
 });
