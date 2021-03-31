@@ -2,7 +2,7 @@
 import express from 'express';
 import exphbs from 'express-handlebars';
 
-var app = express();
+const app = express();
 app.use(express.urlencoded({ extended: true }));
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
