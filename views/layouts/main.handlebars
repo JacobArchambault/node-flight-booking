@@ -11,10 +11,10 @@
    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body   style="background-image: url(/images/airplane.jpg); background-size: cover;">
    <!-- the main layout -->
    <header>
-      <img src="/images/airplane.jpg" alt="A picture of our aircraft" style="max-width: 100%; max-height: 100em" />
+      {{!-- <img src="/images/airplane.jpg" alt="A picture of our aircraft" style="max-width: 100%" /> --}}
       <nav class="navbar navbar-inverse">
          <a class="navbar-brand" href="/"><img src="/images/sun-and-fun-logo.jpg" height='25px' /></a>
          <ul class="nav navbar-nav">
@@ -23,7 +23,7 @@
          </ul>
       </nav> <!-- end nav-bar -->
    </header>
-   <main class="container">
+   <main class="container" style="background-color: rgba(255, 255, 255, 0.4);">
       {{{body}}}
    </main> <!-- end class='container'  -->
 
