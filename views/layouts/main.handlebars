@@ -4,7 +4,7 @@
 <head>
    <meta charset="utf-8">
    <title>{{page_title}}</title>
-   <link href="./css/my-file.css" rel="stylesheet"> 
+   <link href="./css/my-file.css" rel="stylesheet">
 
    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -13,30 +13,23 @@
 
 <body>
    <!-- the main layout -->
-   <div class="container">
-
+   <header>
       <nav class="navbar navbar-inverse">
-         <div class="container-fluid">
-            <div class="navbar-header">
-               <a class="navbar-brand" href="/"><img src="/images/sun-and-fun-logo.jpg" height='25px' /></a>
-            </div>
-            <div>
-               <ul class="nav navbar-nav">
-                  <li class="active"><a href="/">Welcome</a></li>
-                  <li><a href="/flights">Pick a flight</a></li>
-               </ul>
-            </div>
-         </div>
+         <a class="navbar-brand" href="/"><img src="/images/sun-and-fun-logo.jpg" height='25px' /></a>
+         <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Welcome</a></li>
+            <li><a href="/flights">Pick a flight</a></li>
+         </ul>
       </nav> <!-- end nav-bar -->
-
+   </header>
+   <main class="container">
       {{{body}}}
+   </main> <!-- end class='container'  -->
 
-      <div class="footer">
-         <p>&nbsp; &nbsp; &nbsp; &nbsp; Sun or Fun Airlines: Vegas or Miami?</p>
-         <p>&nbsp; &nbsp; &nbsp; &nbsp; &copy; Sun or Fun Airlines, Inc.</p>
+   <footer class="footer">
+      <p>&copy; Sun or Fun Airlines, Inc.</p>
 
-      </div>
-   </div> <!-- end class='container'  -->
+   </footer>
 </body>
 
 </html>
