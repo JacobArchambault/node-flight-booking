@@ -1,0 +1,10 @@
+.order-section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 1em;
+    width: max-content;
+}
+
+input, label {
+    margin: auto auto 1em 0;
+}
