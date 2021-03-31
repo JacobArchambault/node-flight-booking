@@ -4,11 +4,10 @@ import exphbs from 'express-handlebars';
 
 const app = express();
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
-
-app.use(express.static('public'));
 
 app.get('/', (_req, res) => res.render('welcome', { page_title: "welcome page" }));
 
