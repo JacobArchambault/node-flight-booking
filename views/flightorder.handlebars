@@ -1,23 +1,5 @@
 <h2>Daily flights</h2>
 <p>All times are local</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Flight number</th>
-            <th>Depart</th>
-            <th>Arrive</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each flights}}
-        <tr>
-            <td>{{flight}}</td>
-            <td>{{origin}}</td>
-            <td>{{destination}}</td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
 <h2>Reservation form</h2>
 <p>I would like to reserve a flight with the following options</p>
 <form method="post" action="handleform">

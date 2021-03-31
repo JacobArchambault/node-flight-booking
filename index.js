@@ -9,15 +9,17 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-app.get('/', (_req, res) => res.render('welcome', { page_title: "welcome page" }));
-
-app.get('/flights', (_req, res) => res.render('flightorder', {
-   page_title: 'Pick a flight', flights: [
+app.get('/', (_req, res) => res.render('welcome', {
+   page_title: "welcome page", flights: [
       { flight: 1212, origin: "SDF 7:00am", destination: "MIA 9:50am" },
       { flight: 4505, origin: "SDF 7:20am", destination: "LAS 8:30am" },
       { flight: 2212, origin: "SDF 10:00am", destination: "MIA 12:50pm" },
       { flight: 5505, origin: "SDF 11:20am", destination: "LAS 12:30pm" }
    ]
+}));
+
+app.get('/flights', (_req, res) => res.render('flightorder', {
+   page_title: 'Pick a flight',
 }));
 
 app.post('/handleform', (req, res) => res.render('summary', {
