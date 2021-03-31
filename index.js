@@ -1,10 +1,10 @@
 // the app
 import express from 'express';
-var app = express();
+import exphbs from 'express-handlebars';
 
+var app = express();
 app.use(express.urlencoded({ extended: true }));
 
-import exphbs from 'express-handlebars';
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
