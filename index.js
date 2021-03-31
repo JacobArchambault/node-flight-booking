@@ -1,11 +1,10 @@
 // the app
-var express = require('express');
+import express from 'express';
 var app = express();
 
-var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
-var exphbs = require('express-handlebars');
+import exphbs from 'express-handlebars';
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
