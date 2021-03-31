@@ -1,25 +1,20 @@
 <h2>Reservation form</h2>
 <p>I would like to reserve a flight with the following options</p>
 <form method="post" action="handleform">
-    <section class="my-section">
-        <label for="fullname">Enter full name </label><input type="text" name="fullname" placeholder="Enter full name"
+    <section class="order-section">
+        <label for="fullname">Enter full name: </label><input type="text" name="fullname" placeholder="Enter full name"
             required>
-    </section>
-    <section class="my-section">
-        <label for="flightnumber">Enter flight number</label><input type="text" name="flightnumber"
+        <label for="flightnumber">Enter flight number: </label><input type="text" name="flightnumber"
             placeholder="Enter your flight number" required>
-    </section>
-
-    <section class="my-section">
-        <label for="seating">Seating preference</label>
+        <label for="seating">Seating preference: </label>
         <select name="seating">
             <option>First class</option>
             <option>Business</option>
             <option>Coach</option>
         </select>
     </section>
-    <section class="my-section">
-        <label for="meal">Meal preference</label>
+    <label for="meal">Meal preference: </label>
+    <section class="order-section">
         <input type="radio" name="meal" value="Beef">Beef<br>
         <input type="radio" name="meal" value="Chicken">Chicken<br>
         <input type="radio" name="meal" value="Vegan">Vegan
