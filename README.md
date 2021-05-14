@@ -1,9 +1,10 @@
 # Flight booking
 A node.js web application simulating a flight booking website
 
-Before running, you will need to npm install (with --save) the following
+Before running, run 
 
-npm install express --save
-npm install express-handlebars --save
-npm install body-parser --save
+npm install
 
+To run, open a terminal in this directory and type 
+
+node index.js
